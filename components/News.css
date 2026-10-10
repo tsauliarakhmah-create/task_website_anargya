@@ -1,0 +1,122 @@
+.news {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  overflow: clip;
+  scroll-margin-top: 51px;
+}
+
+.news-inner {
+  position: relative;
+  width: 1440px;
+  height: 900px;
+  margin: 0 auto;
+}
+
+/* Ellipse 3 (top 2769 - 2688) */
+.news-glow {
+  position: absolute;
+  width: 994px;
+  height: 1044px;
+  left: 938px;
+  top: 81px;
+  background: #2b4621;
+  filter: blur(125px);
+  pointer-events: none;
+  z-index: 0;
+  /* memudar sebelum batas bawah section (900 - 81 = 819px) */
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 50%, transparent 78%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 50%, transparent 78%);
+}
+
+/* NEWS (top 2816 - 2688) */
+.news-title {
+  position: absolute;
+  width: 579.15px;
+  height: 80.34px;
+  left: calc(50% - 579.15px / 2 + 32.58px);
+  top: 128px;
+  margin: 0;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 58px;
+  text-align: center;
+  color: #ffffff;
+  transform: rotate(0.36deg);
+  z-index: 1;
+}
+
+/* barisan kartu yang bisa digeser (top 2956 - 2688) */
+.news-track {
+  position: absolute;
+  left: 0;
+  top: 268px;
+  width: 100%;
+  display: flex;
+  gap: 32px;
+  padding: 0 280px;
+  scroll-padding-left: 280px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  cursor: grab;
+  z-index: 1;
+}
+.news-track::-webkit-scrollbar { display: none; }
+.news-track.dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  user-select: none;
+}
+
+/* Rectangle 11 / 21 / 20 */
+.news-card {
+  flex: none;
+  height: 452px;
+  background: #d9d9d9;
+  border-radius: 127px;
+  scroll-snap-align: start;
+}
+.news-card-wide { width: 990px; }
+.news-card-narrow { width: 803px; }
+
+/* layar kecil */
+@media (max-width: 1100px) {
+  .news-inner {
+    width: 100%;
+    height: auto;
+    padding: 64px 0;
+  }
+  .news-title {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: auto;
+    height: auto;
+    margin-bottom: 32px;
+    font-size: 32px;
+    transform: none;
+  }
+  .news-track {
+    position: relative;
+    top: auto;
+    padding: 0 24px;
+    scroll-padding-left: 24px;
+    gap: 16px;
+  }
+  .news-card,
+  .news-card-wide,
+  .news-card-narrow {
+    width: 80vw;
+    height: 240px;
+    border-radius: 40px;
+  }
+  .news-glow {
+    left: 40%;
+    top: 0;
+    width: 600px;
+    height: 600px;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}

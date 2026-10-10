@@ -1,0 +1,116 @@
+.story {
+  position: relative;
+  width: 100%;
+  overflow-x: clip;
+  scroll-margin-top: 51px;
+}
+
+.story-glow {
+  position: absolute;
+  width: 994px;
+  height: 1044px;
+  left: calc(50% - 720px - 532px);
+  top: -82px;
+  background: #2b4621;
+  filter: blur(125px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.story-inner {
+  position: relative;
+  width: 1440px;
+  height: 800px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.story-block { display: contents; }
+#history { scroll-margin-top: 51px; }
+
+.story-title {
+  position: absolute;
+  width: 310.37px;
+  height: 58.04px;
+  margin: 0;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 58px;
+  text-align: center;
+  color: #ffffff;
+  transform: rotate(0.36deg);
+}
+.about-title   { left: calc(50% - 310.37px / 2 - 564.81px); top: 153px; }
+.history-title { left: calc(50% - 310.37px / 2 - 35.81px);  top: 463px; }
+
+.story-text {
+  position: absolute;
+  width: 577.19px;
+  margin: 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+  color: #ffffff;
+  transform: rotate(0.36deg);
+}
+.about-text   { left: calc(50% - 577.19px / 2 - 363.41px); top: 230px; }
+.history-text { left: calc(50% - 577.19px / 2 + 142.59px); top: 527px; }
+
+.story-photo {
+  position: absolute;
+  width: 468px;
+  height: 259px;
+  background: #d9d9d9;
+  border-radius: 56px;
+}
+.about-photo   { left: 793px; top: 150px; }
+.history-photo { left: 64px;  top: 465px; }
+
+.story-button {
+  box-sizing: border-box;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  padding: 12px;
+  gap: 8px;
+  background: #29d970;
+  border: 1px solid #631acb;
+  border-radius: 8px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.about-button   { width: 122px; left: 72px;  top: 333px; }
+.history-button { width: 166px; left: 574px; top: 653px; }
+
+@media (max-width: 1100px) {
+  .story-inner {
+    width: 100%;
+    height: auto;
+    padding: 64px 24px;
+  }
+  .story-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    margin-bottom: 64px;
+  }
+  .story-title,
+  .story-text,
+  .story-photo,
+  .story-button {
+    position: static;
+    left: auto;
+    top: auto;
+    transform: none;
+  }
+  .story-title { width: auto; height: auto; }
+  .story-text  { width: 100%; max-width: 577px; }
+  .story-photo { width: 100%; max-width: 468px; height: 220px; }
+  .story-glow  { left: -300px; }
+}

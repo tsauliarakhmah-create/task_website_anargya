@@ -1,0 +1,143 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 737px;
+  overflow: hidden;
+}
+
+/* kotak isi selebar frame Figma, di tengah */
+.hero-inner {
+  position: relative;
+  width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* Ellipse 1 (top 146 - 51) */
+.hero-glow {
+  position: absolute;
+  width: 1342px;
+  height: 642px;
+  left: 49px;
+  top: 95px;
+  background: rgba(74, 74, 15, 0.69);
+  filter: blur(125px);
+  z-index: 0;
+}
+
+/* Lets get start with (top 290 - 51) */
+.hero-small {
+  position: absolute;
+  width: 1147.2px;
+  height: 32.92px;
+  left: calc(50% - 1147.2px / 2 - 59.73px);
+  top: 239px;
+  font-family: var(--font-istok), sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+  text-align: center;
+  color: #29d970;
+  transform: rotate(0.36deg);
+}
+
+/* ANARGYA 9TH GEN (top 313 - 51) */
+.hero-title {
+  position: absolute;
+  width: 1152px;
+  left: calc(50% - 1152px / 2 - 60px);
+  top: 262px;
+  margin: 0;
+  font-family: var(--font-title), sans-serif;
+  font-weight: 400;
+  font-size: 128px;
+  line-height: 164px;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  text-align: center;
+  color: #ffffff;
+}
+.hero-title span { color: #29d970; }
+
+/* Born to Move Forward (top 462 - 51) */
+.hero-tagline {
+  position: absolute;
+  width: 844px;
+  height: 66px;
+  left: 230px;
+  top: 411px;
+  margin: 0;
+  font-family: var(--font-istok), sans-serif;
+  font-size: 24px;
+  line-height: 35px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Button (top 508 - 51) */
+.hero-button {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  gap: 8px;
+  position: absolute;
+  width: 176px;
+  height: 40px;
+  left: 564px;
+  top: 457px;
+  background: #29d970;
+  border: 1px solid #631acb;
+  border-radius: 8px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Layar kecil: susunan biasa supaya tidak berantakan */
+@media (max-width: 1100px) {
+  .hero {
+    height: auto;
+    min-height: 520px;
+  }
+  .hero-inner {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 24px;
+  }
+  .hero-glow {
+    left: 50%;
+    top: 50%;
+    width: 140%;
+    height: 420px;
+    transform: translate(-50%, -50%);
+  }
+  .hero-small,
+  .hero-title,
+  .hero-tagline,
+  .hero-button {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: auto;
+    height: auto;
+    transform: none;
+    z-index: 1;
+  }
+  .hero-title {
+    font-size: clamp(44px, 12vw, 90px);
+    line-height: 1.2;
+    white-space: normal;
+  }
+  .hero-button {
+    margin-top: 24px;
+    width: 176px;
+    height: 40px;
+  }
+}
