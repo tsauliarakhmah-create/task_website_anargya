@@ -4,6 +4,7 @@ import About from "@/components/About";
 import "./hero.css";
 import Achievement from "@/components/Achievement";
 import News from "@/components/News";
+import Sponsor from "@/components/Sponsor";
 
 const istok = Istok_Web({
   subsets: ["latin"],
@@ -36,6 +37,8 @@ export default function Home() {
       <About />
       <Achievement />
       <News />
+      <Sponsor />
+
     </>
   );
 }
